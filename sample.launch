@@ -1,0 +1,8 @@
+<launch>
+    <node name="resizer_node"
+        pkg="detailed_resizer" type="resizer.py"
+          output="screen" respawn="true">
+        <remap from="~inp" to="/kinect_head/rgb/image_rect_color"/>
+        <remap from="~out" to="/kinect_head/rgb/custom_resized"/>
+    </node>
+</launch>
